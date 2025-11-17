@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'partials/_preloader.html' %}
+{% include 'partials/_buscar.html' %}
+{% include 'partials/_header.html' %}
+<section class="best-acad-area">
+    <div class="container">
+        {{ curso.codigo }} <br/>
+        {{ curso.descricao }} <br/>
+        {{ curso.ch_total }} horas <br/>
+        <span>{{ data_acesso | date:"d/m/Y H:m:s"}}</span>
+    </div>
+</section>
+{% include 'partials/_footer.html' %}
+{% endblock %}
